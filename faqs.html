@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="faqs.css">
+    <title>FAQ's</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #34495e;
+  color: #fff;
+}
+h1 {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 2.5rem;
+}
+
+.accordion {
+  width: 90%;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+.accordion-item {
+  background-color: #fff;
+  color: #111;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+}
+.accordion-item-header {
+  padding: 0.5rem 3rem 0.5rem 1rem;
+  min-height: 5rem;
+  line-height: 1.25rem;
+  font-weight: bold;
+  display:flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.accordion-item-header::after {
+  content: "\002B";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+}
+.accordion-item-header.active::after {
+  content: "\2212";
+}
+.accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+.accordion-item-body-content {
+  padding: 1rem;
+  line-height: 2rem;
+  border-top: 1px solid;
+  border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+}
+
+@media(max-width:767px) {
+  html {
+    font-size: 14px;
+  }
+}
+</style>
+<body>
+    <h1>FAQ</h1>
+
+<div class="accordion">
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+        What are the time restrictions of buying a ticket online?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+        Online booking is available for all flights up to 2 hours before scheduled departure time. Online booking is available for any flight, with a scheduled departure up to 361 days in the future.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+       What is the maximum number of travellers for whom I can make an online reservation?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+        In one online transaction, you can book up to nine (9) passengers, including adults andchildren in your traveling party. Infants are co-related to the number of adults in the travelingparty. The figure could vary in Business and First class depending on the configuration of theaircraft.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+        Can I make an online booking for a child traveling alone?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+        No, you cannot make a booking for a child travelling alone. Please contact your nearest Air India office for further details.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+        How can I book a one way or return travel?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+        Select the "One way” radio button on the "Search Flights” tab for one-way travel. The "Return” radio button is used for booking return point to point travel.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+        How can I book a flight that returns to/from a different airport?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+        Please use the "Multi-City” link to enter details of your separate flights.
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+    const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
+
+accordionItemHeaders.forEach(accordionItemHeader => {
+  accordionItemHeader.addEventListener("click", event => {
+    accordionItemHeader.classList.toggle("active");
+    const accordionItemBody = accordionItemHeader.nextElementSibling;
+    if(accordionItemHeader.classList.contains("active")) {
+      accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+    }
+    else {
+      accordionItemBody.style.maxHeight = 0;
+    }
+    
+  });
+});
+</script>
+    
+</body>
+</html>

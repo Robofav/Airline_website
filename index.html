@@ -1,15 +1,473 @@
 <!DOCTYPE html>
 <html lang="en">
-    <style>
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    Google Font
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"/>
+  
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="partner.css">
+  </head>
+  <style>
+    * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.mm{
+  position: absolute;
+  text-align: center;
+  color: black;
+}
+.mm h1{
+  color:  blue;
+ margin-left: 500px;
+ margin-top: 50%;
+  font-weight: 200;
+  font-size: 50px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.mm h2{
+  color: blue;
+  font-size: 50px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.column {
+  width: 100%;
+  padding: 0 1em 1em 1em;
+  text-align: center;
+}
+.card {
+  width: 100%;
+  height: 100%;
+  padding: 2em 1.5em;
+  background: linear-gradient(#ffffff 50%, #2c7bfe 50%);
+  background-size: 100% 200%;
+  background-position: 0 2.5%;
+  border-radius: 5px;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition: 0.5s;
+}
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f194c;
+  margin: 1em 0;
+}
+p {
+  color: #575a7b;
+  font-size: 15px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+}
+.icon-wrapper {
+  background-color: #2c7bfe;
+  position: relative;
+  margin: auto;
+  font-size: 30px;
+  height: 2.5em;
+  width: 2.5em;
+  color: #ffffff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: 0.5s;
+}
+.card:hover {
+  background-position: 0 100%;
+}
+.card:hover .icon-wrapper {
+  background-color: #ffffff;
+  color: #2c7bfe;
+}
+.card:hover h3 {
+  color: #ffffff;
+}
+.card:hover p {
+  color: #f0f0f0;
+}
+@media screen and (min-width: 768px) {
+  section {
+    padding: 0 2em;
+  }
+  .column {
+    flex: 0 50%;
+    max-width: 50%;
+  }
+}
+@media screen and (min-width: 992px) {
+  section {
+    padding: 1em 3em;
+  }
+  .column {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
+}
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+    /* section 4th  */
+.fourth {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  left: 0px;
+  /* bottom: 0px; */
+  top: -80px;
+  /* top: 4049px; */
+
+}
+
+
+.img-des {
+  display: none;
+}
+#photos div {
+  position: absolute;
+
+}
+#photos div:hover {
+ 
+  opacity: 0.8;
+  transition: 0.4s;
+  box-shadow: 0px 0px 15px 8px #314478;
+}
+#photos div:hover .img-des {
+  display: block;
+  position: absolute;
+  font-size: 2.3rem;
+  font-weight: 550;
+  transition: 0.4s;
+  top: 10%;
+  left: 5%;
+  right: 5%;
+}
+#taj {
+  top: 19%;
+  left: 5.2%;
+}
+#taj img {
+  height: 385px;
+  width: 375px;
+}
+#beach {
+  top: 80%;
+  left: 5.2%;
+}
+#beach img {
+  height: 165px;
+  width: 375px;
+}
+#hawa {
+  top: 13%;
+  left: 35%;
+}
+#hawa img {
+  height: 165px;
+  width: 375px;
+}
+#golden {
+  top: 30%;
+  left: 65%;
+}
+#golden img {
+  height: 275px;
+  width: 375px;
+}
+#rath {
+  left: 65%;
+  top: 52%;
+}
+#rath img {
+  height: 275px;
+  width: 375px;
+}
+#boat {
+  left: 35%;
+  top: 44%;
+}
+#boat img {
+  height: 385px;
+  width: 375px;
+}
+  
+body,
+input,
+textarea {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  padding: 20px;
+
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  width: 100%;
+  max-width: 820px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.contact-form {
+  
+  position: relative;
+}
+
+
+
+.contact-form:before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+
+  transform: rotate(45deg);
+  top: 50px;
+  left: -13px;
+}
+
+form {
+  padding: 2.3rem 2.2rem;
+  z-index: 10;
+  overflow: hidden;
+  position: relative;
+}
+
+.title {
+  color: black;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-bottom: 0.7rem;
+}
+
+.input-container {
+  position: relative;
+  margin: 1rem 0;
+}
+
+.input {
+  width: 100%;
+  outline: none;
+  border: 2px solid black;
+ 
+  padding: 0.6rem 1.2rem;
+  color: black;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+textarea.input {
+  padding: 0.8rem 1.2rem;
+  min-height: 150px;
+  border-radius: 22px;
+  resize: none;
+  overflow-y: auto;
+}
+
+.input-container label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  padding: 0 0.4rem;
+  color: black;
+  font-size: 0.9rem;
+  font-weight: 400;
+  pointer-events: none;
+  z-index: 1000;
+  transition: 0.5s;
+}
+
+.input-container.textarea label {
+  top: 1rem;
+  transform: translateY(0);
+}
+
+.btn {
+  padding: 0.6rem 1.3rem;
+  border: 2px solid black;
+  font-size: 0.95rem;
+  color: black;
+  line-height: 1;
+  border-radius: 25px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 0;
+}
+
+
+.btn:hover {
+  background-color: transparent;
+  color: black;
+}
+
+.input-container span {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  transform: translateY(-50%);
+  font-size: 0.8rem;
+  padding: 0 0.4rem;
+  color: transparent;
+  pointer-events: none;
+  z-index: 500;
+}
+
+.input-container span:before,
+.input-container span:after {
+  content: "";
+  position: absolute;
+  width: 10%;
+  opacity: 0;
+  transition: 0.3s;
+  height: 5px;
+  background-color: black;
+  top: 50%;
+  transform: translateY(-50%);
+  border: black;
+}
+
+.input-container span:before {
+  left: 50%;
+}
+
+.input-container span:after {
+  right: 50%;
+}
+
+.input-container.focus label {
+  top: 0;
+  transform: translateY(-50%);
+  left: 25px;
+  font-size: 0.8rem;
+}
+
+.input-container.focus span:before,
+.input-container.focus span:after {
+  width: 50%;
+  opacity: 1;
+}
+
+.contact-info {
+  padding: 2.3rem 2.2rem;
+  position: relative;
+  background-color: white;
+  border: black 2px solid;
+}
+
+.contact-info .title {
+  color: black;
+}
+
+.text {
+  color: black;
+  margin: 1.5rem 0 2rem 0;
+}
+
+.information {
+  display: flex;
+  color: black;
+  margin: 0.7rem 0;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.icon {
+  width: 28px;
+  margin-right: 0.7rem;
+  color: black;
+}
+
+.social-media {
+  padding: 2rem 0 0 0;
+  color: black;
+}
+
+.social-media p {
+  color: black;
+}
+
+.social-icons {
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.social-icons a {
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  color: black;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 0.5rem;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.05);
+}
+.square {
+  position: absolute;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(181%, 11%);
+  opacity: 0.2;
+}
+
+        
+        .body{
+          
+            height: 200px;
+            width: 100%;
+            border: 5px solid black;
+        }
         html{
-            background: url(grad2.jpg) no-repeat;
+           
             background-repeat: no-repeat; 
             background-size: cover; 
         }
         .image{
             height: 400px; 
             display: flex;
-             background: url(h1.jpg); 
+             background: url(/images/h1.jpg); 
              position:relative; 
               background-repeat: no-repeat; 
               background-size: cover; 
@@ -17,7 +475,7 @@
                overflow: hidden;
         }
         .button{
-            top: 2120px;
+            top: 3120px;
             left: 70%;
             position: absolute;
             padding: 10px;
@@ -27,7 +485,7 @@
         }
         
         .hh{
-            top: 2030px;
+            top: 3000px;
             left: 60%;
             position: absolute;
             color: black;
@@ -36,9 +494,10 @@
   
         #main{       
             background:#f3f3f3;
-            background: url(plane.jpg) no-repeat;
+            background: url(/images/Plane.jpg) no-repeat;
             background-size: cover;
-            height: 800px;
+            height: 1000px;
+            width: 100%;
             margin-top: -34px;
             background-position: top;
             justify-content: center;
@@ -61,13 +520,13 @@
             border-radius: 38px;
         }
         #main button:hover{
-            background:#219150;
+           
             color: black; 
         }
       
         #main h1{
             margin-left: 110px;         
-            line-height: 180px; 
+
         }
      
         #main hh{
@@ -79,14 +538,406 @@
         #main hhh{
             top: 500px;
             color: black;
+        
         }
+        #main divv{
+            height: 100%;
+            width: 100%;
+        }
+        #main img{
+            width: 400px;
+            display: flex;
+            justify-content: space-evenly;
+            border-radius: 20px;
+        }
+
+       
+      
+      .bar a {
+        padding: 26px 30px;
+        text-decoration: none;
+        color: white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-style: unset;
+        font-weight: 300px;
+        font-size: 18px;
+      }
+      a:hover{
+        color: orange;
+      }
+      .bar{
+        position:relative;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        left: 80px;
+        font-size: 40px;
+      }
+      
+      /* .login{
+        position:absolute;
+        right: -100px;
+        top: 5px;
+      } */
+      
+      .login{
+        position:relative;
+        margin-left: 14%;
+        margin-top: -0.5%;
+      }
+      
+      .div1{
+          position: absolute;
+          margin-top: 2%;
+          margin-left: 15%;
+      }
+      .box1{
+          position:relative;
+          background-color: white;
+          color:black;
+          height:600px;
+          width: 1200px;
+          border-radius: 10px;
+      }
+      
+      .box1:hover{
+        opacity:1;
+      }
+      
+      .btn {
+          position:relative;
+          border: none;
+          outline: none;
+          height: 55px;
+          width: 120px;
+          background-color: white;
+          cursor: pointer;
+          border-radius: 5%;
+          margin-top: 1%;
+          font-family: 'Times New Roman', Times, serif;
+          margin-left: 2%;
+          border: 2px solid black;
+          top: 20px;
+        }
+        
+        /* Style the active class (and buttons on mouse-over) */
+        .btn:hover{
+          background-color: black;
+          color:white;
+        }
+      
+        /*.btn:active{
+          background-color: yellow;
+        }*/
+      
+        .input1{
+          font-size: 20px;
+        }
+      
+        .box2{
+          position:absolute;
+          height:20%;
+          width: 95%;
+          margin-top: 3%;
+          margin-left: 2%;
+          background-color: white;
+          border-radius: 5px;
+          opacity: 1;
+          border: 2px solid black;
+          }
+      
+          .box2:hover{
+            background-color: black;
+            color:white;
+          }
+      
+        .index1{
+          position: absolute;
+          left: 2%;
+          font-size:30px;
+          bottom: 30%;
+        }
+      
+        .index2{
+          position:absolute;
+          right: 2%;
+          font-size: 20px
+        }
+      
+        .index3{
+          position: absolute;
+          left: 2%;
+          bottom: 18%;
+          font-size: 20px;
+        }
+      
+        .button_i1{
+          position: absolute;
+          left: 2%;
+          bottom: 8%;
+          font-size: 20px;
+        }
+      
+        .index4{
+          position: absolute;
+          right: 2%;
+          bottom: 8%;
+          font-size: 20px;
+        }
+      
+        .index5{
+          position: absolute;
+          left: 30%;
+          font-size:20px;
+          bottom: 42%;
+        }
+      
+        .index6{
+          position: absolute;
+          left: 60%;
+          font-size:20px;
+          bottom: 42%;
+        }
+      
+        .index_4_1{
+          position: absolute;
+          right: 60%;
+          bottom: 6.5%;
+          font-size: 20px;
+        }
+      
+        .index_4_1:hover{
+          border: 2px solid black;
+          cursor: pointer;
+        }
+      
+        .index_4_2{
+          position: absolute;
+          right: 42%;
+          bottom: 6.5%;
+          font-size: 20px;
+        }
+        .index_4_2:hover{
+          border: 2px solid black;
+          cursor: pointer;
+        }
+      
+        .index_4_3{
+          position: absolute;
+          right: 32%;
+          bottom: 6.5%;
+          font-size: 20px;
+        }
+        .index_4_3:hover{
+          border: 2px solid black;
+          cursor: pointer;
+        }
+      
+        .box3{
+          position:absolute;
+          height:20%;
+          width: 95%;
+          top: 45%;
+          margin-left: 2%;
+          background-color: white;
+          border-radius: 5px;
+          opacity:1;
+          border: 2px solid black;
+        }
+      
+        .box3:hover{
+          background-color: black;
+          color:white;
+        }
+      
+      
+        .box4{
+          position:absolute;
+          height:20%;
+          width: 95%;
+          top: 75%;
+          margin-left: 2%;
+          background-color: white;
+          border-radius: 5px;
+          border: 2px solid black;
+        }
+      
+        .box4:hover{
+          background-color: black;
+          color:white;
+        }
+      
+      
+        .box_main{
+          position:absolute;
+          height: 60px;
+          width: 180px;
+          margin-top: -0.8%;
+          right: 7.45%;
+          background-color: white;
+          color:black;
+          border-radius: 10px;
+          opacity: 1;
+          
+        }
+      
+        .box_main:hover{
+            background-color: black;
+            color:white;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+
+
+
+
+        @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        body {
+          font-family: 'Montserrat', sans-serif;
+         
+          color: black;
+        }
+        h1 {
+          text-align: center;
+          margin: 2rem 0;
+          font-size: 2.5rem;
+        }
+        
+        .accordion {
+          width: 90%;
+          max-width: 1000px;
+          margin: 2rem auto;
+        }
+        .accordion-item {
+          background-color: #fff;
+          color: #111;
+          margin: 1rem 0;
+          border-radius: 0.5rem;
+          box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+        }
+        .accordion-item-header {
+          padding: 0.5rem 3rem 0.5rem 1rem;
+          min-height: 5rem;
+          line-height: 1.25rem;
+          font-weight: bold;
+          display:flex;
+          align-items: center;
+          position: relative;
+          cursor: pointer;
+        }
+        .accordion-item-header::after {
+          content: "\002B";
+          font-size: 2rem;
+          position: absolute;
+          right: 1rem;
+        }
+        .accordion-item-header.active::after {
+          content: "\2212";
+        }
+        .accordion-item-body {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.5s ease-out;
+        }
+        .accordion-item-body-content {
+          padding: 1rem;
+          line-height: 2rem;
+          border-top: 1px solid;
+          border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+        }
+        
+        @media(max-width:767px) {
+          html {
+            font-size: 14px;
+          }
+        }
+
+
+  
     </style>
 <head>
     <title>Document</title>
-</head>
+</head> 
 <body>
-    <div id="main">
+  <div id="main">
+    <header>
+      <nav>
         
+          
+     <div class="bar">
+        
+          <a  href="aboutus.html">About us</a>
+
+          <a  href="booksearch.html">Book trip</a>
+          <a  href="faqs.html">FAQ</a>
+  
+          <a href="signup.html">sign up</a>
+         
+      </div>
+      </nav>
+  </header>
+
+    <div class="mm">
+      <h1>welcome to airlines system</h1>
+      <h2> let's explore it more
+      </h2>
+    </div>
+
+
+  </div>
+  
+    
+<h1>
+  Our Portfolio
+</h1>
+    <div class="fourth">
+      
+      <div><img src=""></div>
+      <section id="photos">
+        <div id="taj">
+          <img src="/images\h5.jpg">
+          <span class="img-des">
+            America place<br>
+          </span>
+        </div>
+  
+        <div id="hawa">
+          <img src="/images\h1.jpg">
+          <span class="img-des">
+            Singapur <br>
+          </span>
+        </div>
+        <div id="golden">
+          <img src="/images\h2.jpg">
+          <span class="img-des">
+            Dubai place<br>
+          </span>
+        </div>
+        <div id="beach">
+          <img src="/images\h3.jpg">
+          <span class="img-des">
+            Elephant Beach<br>Andaman
+          </span>
+        </div>
+        <div id="boat">
+          <img src="/images\h4.jpg">
+          <span class="img-des">
+            France<br>
+          </span>
+        </div>
+        <div id="rath">
+          <img src="/images\h6.jpg">
+          <span class="img-des">
+            Hobgkong<br>place
+          </span>
+      </section>
     </div>
         <script> 
         async function loadPage(){
@@ -153,8 +1004,6 @@ loadPage()
 
 
 let divv=document.createElement("div");
-divv.style.width="100%";
-divv.style.height="50px";
 document.body.appendChild(divv);
 
 let divv1=document.createElement("div");
@@ -166,8 +1015,8 @@ let textt=document.createElement('txt');
 textt.innerText="See our Related Images";
 textt.style="font-size: 50px; margin-left: 40%; margin-top: 50%px;";
 document.body.appendChild(textt);
-
-
+</script>
+<script>
 
 let main = document.createElement('div');
 main.style.display="flex";
@@ -176,41 +1025,41 @@ main.style.backgroundColor="white";
 main.style.marginTop="80px";
 document.body.appendChild(main);
 
-
-
 let img = document.createElement('img');
-img.src = "h1.jpg";
+img.src = "/images/h1.jpg";
+img.opacity= 0.8;
+img.transition= 0.4;
 img.style.width="400px";
 img.style.display="flex";
 img.style.justifyContent="space-evenly";
 img.style.borderRadius="20px";
-img.style.marginLeft="50px";
+img.style.marginLeft="10px";
 main.appendChild(img);
 
 let img1 = document.createElement('img');
-img1.src = "h2.jpg";
+img1.src = "/images/h2.jpg";
 img1.style.width="400px";
 img1.style.display="flex";
 img1.style.justifyContent="space-evenly";
-img1.style.marginLeft="50px";
+img1.style.marginLeft="20px";
 img1.style.borderRadius="20px";
 main.appendChild(img1);
 
 let img2 = document.createElement('img');
-img2.src = "h3.jpg";
+img2.src = "/images/h3.jpg";
 img2.style.width="400px";
 img2.style.display="flex";
 img2.style.justifyContent="space-evenly";
-img2.style.marginLeft="50px";
+img2.style.marginLeft="20px";
 img2.style.borderRadius="20px";
 main.appendChild(img2);
 
 let img3 = document.createElement('img');
-img3.src = "h4.jpg";
+img3.src = "/images/h4.jpg";
 img3.style.width="400px";
 img3.style.display="flex";
 img3.style.justifyContent="space-evenly";
-img3.style.marginLeft="50px";
+img3.style.marginLeft="20px";
 img3.style.borderRadius="20px";
 main.appendChild(img3);
 
@@ -219,43 +1068,43 @@ let main1 = document.createElement('div2');
 main1.style.display="flex";
 main1.style.position="relative";
 main1.style.backgroundColor="white";
+main1.style.marginLeft="10px";
 main1.style.marginTop="100px";
 document.body.appendChild(main1);
 
 let img4 = document.createElement('img');
-img4.src = "h5.jpg";
+img4.src = "/images/h5.jpg";
 img4.style.width="400px";
 img4.style.justifyContent="space-evenly";
 img4.style.borderRadius="20px";
-img4.style.marginLeft="50px";
 img4.style.marginTop="50px";
 main1.appendChild(img4);
 
 let img5 = document.createElement('img');
-img5.src = "h6.jpg";
+img5.src = "/images/h6.jpg";
 img5.style.width="400px";
 img5.style.justifyContent="space-evenly";
 img5.style.borderRadius="20px";
-img5.style.marginLeft="50px";
+img5.style.marginLeft="20px";
 img5.style.marginTop="50px";
 main1.appendChild(img5);
 
 let img6 = document.createElement('img');
-img6.src = "h7.jpg";
+img6.src = "/images/h7.jpg";
 img6.style.width="400px";
+img6.style.opacity= 0.5;
 img6.style.justifyContent="space-evenly";
 img6.style.borderRadius="20px";
-img6.style.marginLeft="50px";
+img6.style.marginLeft="20px";
 img6.style.marginTop="50px";
 main1.appendChild(img6);
 
 let img7 = document.createElement('img');
-img7.src = "h10.jpg";
+img7.src = "/images/h10.jpg";
 img7.style.width="400px";
-img7.style.justifyContent="space-evenly";
 img7.style.borderRadius="20px";
 img7.style.marginLeft="50px";
-img7.style.marginTop="50px";
+img7.style.marginTop="20px";
 main1.appendChild(img7);
 
 
@@ -284,7 +1133,7 @@ description1.appendChild(desp);
         button.innerHTML="Sign up";
         
         button.addEventListener('click', () => {
-            window.location.href = "signup.html";
+            window.location.href = "/signup.html";
         });
         
         
@@ -301,7 +1150,7 @@ description1.appendChild(desp);
         document.body.appendChild(counts);
     
         let countImg = document.createElement('img');
-        countImg.src = "h1.jpg";
+        countImg.src = "/images/h1.jpg";
         countImg.style = "position: absolute; left: 80px;margin-top: 23px; width:1300px; height:268px;"
         counts.appendChild(countImg);
     
@@ -382,7 +1231,7 @@ description1.appendChild(desp);
     adviceSec.appendChild(red);
 
     let adpic = document.createElement('img');
-    adpic.src = "pres.jpeg";
+    adpic.src = "/images/pres.jpeg";
     adpic.style = "width=321px; height:385px;"
     adviceSec.appendChild(adpic);
 
@@ -431,7 +1280,7 @@ description1.appendChild(desp);
     events.appendChild(events1);
 
     let evepic1 = document.createElement('img');
-    evepic1.src = "h7.jpg";
+    evepic1.src = "/images/h7.jpg";
     evepic1.style = "width:430px; height:250px;";
     events1.appendChild(evepic1);
 
@@ -454,7 +1303,7 @@ description1.appendChild(desp);
     events.appendChild(events2);
 
     let evepic2 = document.createElement('img');
-    evepic2.src = "h3.jpg";
+    evepic2.src = "/images/h3.jpg";
     evepic2.style = "width:430px; height:250px;";
     events2.appendChild(evepic2);
 
@@ -476,7 +1325,7 @@ description1.appendChild(desp);
     events.appendChild(events3);
 
     let evepic3 = document.createElement('img');
-    evepic3.src = "h6.jpg";
+    evepic3.src = "/images/h6.jpg";
     evepic3.style = "width:430px; height:250px;";
     events3.appendChild(evepic3);
 
@@ -500,113 +1349,301 @@ description1.appendChild(desp);
     inviewBtn2.innerText = "Contact us";
     inviewBtn2.style = "cursor: pointer;display: inline-block;position: relative;transition: 0.5s;border-radius: 4px;border: none;color: black;text-align: center;font-size: 20px;padding: 10px;width: 120px;cursor: pointer;box-shadow: 0 10px 20px -8px rgba(0, 0, 0, .7);"
     inviewBtn2.addEventListener('click', () => {
-        window.location.href = "contactus.html";
+        window.location.href = "/contactus.html";
     });
 
     viewButton2.appendChild(inviewBtn2);
     
+
+
+    var text = ["Explore the world with ADS Airlines", "World is a book who does not travel only read one page", "Get instant discount with our promo code", "Fly safer and enjoy your vaccations with ADS Airlines"];
+    var text1 = ["Be a ADS member and fly to earn 1700 welcome bonus loyality points", "Use ADS PayLater at lowest EMIs starting at 6% per annum", "Get exiting rewards and benifits and once free air trip on special occasions"];
+    var counter = 0;
+    var elem = document.getElementById("text1");
+    var elem1 = document.getElementById("greet");
+    var inst = setInterval(change, 2000);
+    function change() {
+        elem.innerHTML = text[counter];
+        counter++;
+        if (counter >= text.length) {
+            counter = 0;
+        }
+    };
+    var counter = 0;
+    var inst1 = setInterval(change, 3000);
+    function change1() {
+        elem1.innerHTML = text1[counter];
+        counter++;
+        if (counter >= text1.length) {
+            counter = 0;
+        }
+    };
+    var imageSources = ["images/h1.jpg", "images/h1.jpg", "images/h1.jpg"]
+    var index = 0;
+    setInterval(function(){
+        if(index === imageSources.length) {
+            index = 0;
+        }
+        document.getElementById("image").src = imageSources[index];
+        index++;
+    }, 2000);
+    
+    // var btn = document.getElementById("btn");
+    var box = document.getElementById("box");
+    var boxx = document.getElementById("boxx")
+    setInterval(function changeColor() {
+        if(box.style.backgroundColor == "grey"){
+            box.style.backgroundColor = "red";
+        }else{
+            box.style.backgroundColor = "grey";
+        }
+    },2000);
+    setInterval(function changeColor() {
+        if(boxx.style.backgroundColor == "red"){
+            boxx.style.backgroundColor = "grey";
+        }else{
+            boxx.style.backgroundColor = "red";
+        }
+    },2000);
+
+
   
      
-     let footer1 = document.createElement('footer1');
-     footer1.className = "footer1";
-     footer1.style = "  height: 200px; display: flex; justify-content: space-evenly;";
-     document.body.appendChild(footer1);
- 
-    
-     let foot0 = document.createElement('div');
-     foot0.style = " margin-top: 10px;";
-     foot0.className = "foot1";
-     footer1.appendChild(foot0);
- 
-     let footh0 = document.createElement('h6');
-     footh0.innerText = "Contact info:";
-     footh0.style = " font-size: 15px; margin-bottom: 20px;color: black;text-align: center;";
-     foot0.appendChild(footh0);
- 
-     let p0 = document.createElement('h6');
-     p0.innerText = "easytrip@gmail.com";
-     p0.style = " color: black; margin: 10px; text-align: center; font-size:15px;";
-     foot0.appendChild(p0);
- 
-     let p01 = document.createElement('h6');
-     p01.innerText = "b/20 arshad road bikar appartment mumbai";
-     p01.style = " color: black; margin: 10px; text-align: center; font-size:15px;";
-     foot0.appendChild(p01);
- 
- 
-    
-     let foot1 = document.createElement('div');
-     foot1.style = " margin-top: 20px;";
-     foot1.className = "foot1";
-     footer1.appendChild(foot1);
- 
-     let footh1 = document.createElement('h6');
-     footh1.innerText = "Call us:";
-     footh1.style = " font-size: 15px; margin-bottom: 20px;color: black;text-align: center;";
-     foot1.appendChild(footh1);
- 
-     let p1 = document.createElement('h6');
-     p1.innerText = "(+91) 1242679002";
-     p1.style = " color: black; margin: 10px; text-align: center; font-size:15px;";
-     foot1.appendChild(p1);
- 
-     let p2 = document.createElement('h6');
-     p2.innerText = "(+91) 8368174518";
-     p2.style = " color: black; margin: 10px; text-align: center; font-size:15px;";
-     foot1.appendChild(p2);
- 
-     //quicks links
-     let foot2 = document.createElement('div');
-     foot2.style = " margin-top: 20px;";
-     foot2.className = "foot1";
-     footer1.appendChild(foot2);
- 
-     let footh2 = document.createElement('h6');
-     footh2.innerText = "Quicks link:";
-     footh2.style = " font-size: 15px; margin-bottom: 20px;color: black;text-align: center;";
-     foot2.appendChild(footh2);
- 
-     let p3 = document.createElement('h6');
-     p3.innerText = "Department";
-     p3.style = " color: black; margin: 10px; text-align: center; font-size:15px;";
-     foot2.appendChild(p3);
- 
-     let p4 = document.createElement('h6');
-     p4.innerText = "School";
-     p4.style = " color: black; margin: 10px; text-align: center; font-size:15px;";
-     foot2.appendChild(p4);
- 
-     let p5 = document.createElement('h6');
-     p5.innerText = "Centers";
-     p5.style = " color: black; margin: 10px; text-align: center; font-size:15px;";
-     foot2.appendChild(p5);
- 
-     //community
-     let foot3 = document.createElement('div');
-     foot3.style = " margin-top: 20px;";
-     foot3.className = "foot1";
-     footer1.appendChild(foot3);
-    
-     let footh3 = document.createElement('h6');
-     footh3.innerText = "Community:";
-     footh3.style = " font-size: 15px; margin-bottom: 20px;color: black;text-align: center;";
-     foot3.appendChild(footh3);
- 
-     let p6 = document.createElement('h6');
-     p6.innerText = "Support";
-     p6.style = " color: black; margin: 10px; text-align: center; font-size:15px;";
-     foot3.appendChild(p6);
- 
-     let p7 = document.createElement('h6');
-     p7.innerText = "Privacy";
-     p7.style = " color: black; margin: 10px; text-align: center; font-size:15px;";
-     foot3.appendChild(p7);
- 
-     let p8 = document.createElement('h6');
-     p8.innerText = "Help";
-     p8.style = " color: black; margin: 10px; text-align: center; font-size:15px;";
-     foot3.appendChild(p8);
 
     </script>
+
+    <section>
+      <div class="row">
+        <h2 class="section-heading">Our Services</h2>
+      </div>
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="fas fa-hammer"></i>
+            </div>
+            <h3>Food & Beverage</h3>
+            <p>
+              Pre-book from an exclusive menu of delectable preparations of local hits from 
+              kitchens and streets around the world, specially created by the chefs 
+              at our brand new Food Lab. Made today. Served today.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="fas fa-brush"></i>
+            </div>
+            <h3>Baggage</h3>
+            <p>
+              Passengers can book pre-paid excess baggage up to 1 hour prior
+               to the scheduled departure of their domestic flight and 2 hour prior to the
+               scheduled departure of their International flight.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="fas fa-wrench"></i>
+            </div>
+            <h3>Prime Seat</h3>
+            <p>
+              6E Prime is non-cancellable, non-transferable and non-refundable, except
+               that the Fees will be refunded in case of
+                cancellation of the flight booking.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="fas fa-truck-pickup"></i>
+            </div>
+            <h3>Airport Services</h3>
+            <p>
+              Saving time and making your flying experience seamless is our priority. 
+              With our Fast Forward service, you can enjoy priority check-in
+               and priority baggage handling service.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="fas fa-broom"></i>
+            </div>
+            <h3>Trit Assurance</h3>
+            <p>
+              Domestic Travel Assistance Plan covers the passenger(s) f
+              or a period of 60 days from the date of inception of policy
+              which is the date of commencement of journey after booking 
+              their tickets.
+
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="fas fa-plug"></i>
+            </div>
+            <h3>Discover More</h3>
+            <p>
+              As we resume operations, considering the COVID-19 situation, different state governments have laid out their respective protocols
+               for passengers arriving at their airports.
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+    
+
+
+<!--       
+      <h1 class="a1">Our Partners</h1>
+    <section class="next">
+        <div class="box2">
+            <img src="l9.jfif" alt="">
+        <div class="hold">
+      
+        </div>
+        </div>
+        </div>
+
+        
+        <div class="box2">
+            <img src="eagle.png" alt="">
+        <div class="hold">
+       
+    </div>
+
+         
+        </div>
+        <div class="box2">
+            <img src="l2.jpg" alt="">
+            <div class="hold">
+            
+            </div>
+        </div>
+
+
+        <div class="box2">
+            <img src="k.png" width="300px" height="150px" alt="">
+            <div class="hold">
+        </div>
+    </section>
+   
+    <section class="next">
+        <div class="box2">
+            <img src="l3.jfif" alt="">
+        <div class="hold">
+      
+        </div>
+        </div>
+        </div>
+
+        
+        <div class="box2">
+            <img src="l4.jpg" alt="">
+        <div class="hold">
+       
+    </div>
+
+         
+        </div>
+        <div class="box2">
+            <img src="l5.jfif" alt="">
+            <div class="hold">
+            
+            </div>
+        </div>
+
+
+        <div class="box2">
+            <img src="l6.jpg" width="300px" height="150px" alt="">
+            <div class="hold">
+        </div> -->
+
+      <script src="script.js"></script>
+      <h1>FAQ</h1>
+
+      <div class="accordion">
+        <div class="accordion-item">
+          <div class="accordion-item-header">
+              What are the time restrictions of buying a ticket online?
+          </div>
+          <div class="accordion-item-body">
+            <div class="accordion-item-body-content">
+              Online booking is available for all flights up to 2 hours before scheduled departure time. Online booking is available for any flight, with a scheduled departure up to 361 days in the future.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-item-header">
+             What is the maximum number of travellers for whom I can make an online reservation?
+          </div>
+          <div class="accordion-item-body">
+            <div class="accordion-item-body-content">
+              In one online transaction, you can book up to nine (9) passengers, including adults andchildren in your traveling party. Infants are co-related to the number of adults in the travelingparty. The figure could vary in Business and First class depending on the configuration of theaircraft.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-item-header">
+              Can I make an online booking for a child traveling alone?
+          </div>
+          <div class="accordion-item-body">
+            <div class="accordion-item-body-content">
+              No, you cannot make a booking for a child travelling alone. Please contact your nearest Air India office for further details.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-item-header">
+              How can I book a one way or return travel?
+          </div>
+          <div class="accordion-item-body">
+            <div class="accordion-item-body-content">
+              Select the "One way” radio button on the "Search Flights” tab for one-way travel. The "Return” radio button is used for booking return point to point travel.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-item-header">
+              How can I book a flight that returns to/from a different airport?
+          </div>
+          <div class="accordion-item-body">
+            <div class="accordion-item-body-content">
+              Please use the "Multi-City” link to enter details of your separate flights.
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+          const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
+      
+      accordionItemHeaders.forEach(accordionItemHeader => {
+        accordionItemHeader.addEventListener("click", event => {
+          accordionItemHeader.classList.toggle("active");
+          const accordionItemBody = accordionItemHeader.nextElementSibling;
+          if(accordionItemHeader.classList.contains("active")) {
+            accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+          }
+          else {
+            accordionItemBody.style.maxHeight = 0;
+          }
+          
+        });
+      });
+      </script>
+          
+  
+ 
+  
 </body>
 </html>

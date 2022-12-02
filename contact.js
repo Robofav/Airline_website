@@ -18,7 +18,7 @@ bg.style.top = "0px";
 document.body.append(bg);
 
 async function load() {
-  let request = new Request("bmu.json");
+  let request = new Request("json/bmu.json");
   let response = await fetch(request);
 
   let json_obj = await response.json();
